@@ -72,18 +72,6 @@ button:focus-visible {
 
 }
 
-.x-out{
-  width: 50px;
-  height: 50px;
-  z-index: 5;
-  position: fixed;
-  
-  opacity: 0;
-
-}
-.x-out:hover{
-  opacity: .5;
-}
 
 .pref-item{
   color: black;

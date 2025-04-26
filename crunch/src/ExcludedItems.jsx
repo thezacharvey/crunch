@@ -3,26 +3,51 @@ import xOut from "./assets/x_out.svg";
 import "./css/ExclusionItems.css";
 import { useState } from "react";
 
+function XImg({ num }) {
+  if (num == false) {
+    return <></>;
+  }
+  return <img className="x-out" src={xOut} alt={"x out"} />;
+}
+
 export default function ExclusionItems() {
-  const exclusions = {
-    nuts: false,
-    dairy: false,
-    meat: false,
-  };
+  const [wantsNuts, setWantsNuts] = useState(false);
+  const [wantsDairy, setWantsDairy] = useState(false);
+  const [wantsMeat, setWantsMeat] = useState(false);
 
   return (
     <>
-      <div id="pref-item-descr">Exclusion </div>
+      <div id="pref-item-descr">
+        {" "}
+        <h2>Click unwanted items</h2>{" "}
+      </div>
       <div id="pref-container">
-        <div className="pref-item">
-          nuts <img className="x-out" src={xOut} alt={"x out"} />{" "}
+        <div
+          className="pref-item"
+          onClick={() => {
+            setWantsNuts((wantsNuts) => !wantsNuts);
+          }}
+        >
+          nuts
+          <XImg num={wantsNuts} />
         </div>
-        <div className="pref-item">
-          dairy <img className="x-out" src={xOut} alt={"x out"} />
+        <div
+          className="pref-item"
+          onClick={() => {
+            setWantsDairy((wantsDairy) => !wantsDairy);
+          }}
+        >
+          dairy
+          <XImg num={wantsDairy} />
         </div>
-        <div className="pref-item">
+        <div
+          className="pref-item"
+          onClick={() => {
+            setWantsMeat((wantsMeat) => !wantsMeat);
+          }}
+        >
           meat
-          <img className="x-out" src={xOut} alt={"x out"} />
+          <XImg num={wantsMeat} />
         </div>
       </div>
     </>
