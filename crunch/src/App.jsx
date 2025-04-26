@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import xOut from './assets/x_out.svg'
-import './App.css'
+import { useState } from "react";
+
+import "./css/App.css";
+import ExclusionItems from "./ExcludedItems";
 
 function App() {
-  const [count, setCount] = useState(0)
-  const[xOp, setX] = useState(0);
+  const [count, setCount] = useState(0);
 
   return (
     /*
@@ -33,22 +33,8 @@ function App() {
     </
     */
 
-    <>
-    <div>
-
-      <div id = "pref-item-descr">Exclusion </div>
-      <div id = "pref-container">
-      <div class = "pref-item">nuts <img   class = "x-out"src={xOut} alt={"x out"}/>  </div>
-      <div class = "pref-item">dairy <img  class = "x-out"src={xOut} alt={"x out"}/></div>
-      <div class = "pref-item">meat<img  class = "x-out"src={xOut} alt={"x out"}/></div>
-      </div>
-
-    </div>
-    
-    </>
-    
-   
-  )
+    <ExclusionItems />
+  );
 }
 
-export default App
+export default App;
