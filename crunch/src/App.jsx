@@ -1,7 +1,8 @@
 import { useState } from "react";
 
 import "./css/App.css";
-import ExclusionItems from "./ExcludedItems";
+import ExclusionItems from "./comps/ExcludedItems";
+import FoodHolder from "./comps/FoodHolder";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -32,8 +33,10 @@ function App() {
       </p>
     </
     */
-
-    <ExclusionItems />
+    <>
+      <ExclusionItems />
+      <FoodHolder />
+    </>
   );
 }
 

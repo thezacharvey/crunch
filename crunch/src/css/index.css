@@ -13,16 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
 
 
 body {
   margin: 0;
-  display: flex;
+  display: grid;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -62,31 +57,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
-
-#pref-container{
-
-  display: flex;
-  width: 100%;
-  background-color: azure;
-
-}
-
-
-.pref-item{
-  color: black;
-  padding: 2em;
-  z-index: 4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 144;
-  max-width: 144;
-
-}
-#pref-item-descr{
-  color: black;
-  background-color: grey;
-  padding: 2em;
- 
 }

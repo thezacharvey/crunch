@@ -1,6 +1,6 @@
-import xOut from "./assets/x_out.svg";
-
-import "./css/ExclusionItems.css";
+import xOut from "../assets/x_out.svg";
+import logo from "../assets/main_site_logo.svg";
+import "../css/ExclusionItems.css";
 import { useState } from "react";
 
 function XImg({ num }) {
@@ -17,10 +17,14 @@ export default function ExclusionItems() {
 
   return (
     <>
-      <div id="pref-item-descr">
-        {" "}
-        <h2>Click unwanted items</h2>{" "}
+      <div id="logo-container">
+        <img src={logo} alt="logo" />
       </div>
+      <div id="main-desc-container">
+        <p id="main-desc">Just Recipes...</p> <p id="main-desc2"> No Bs.</p>
+      </div>
+
+      <div id="pref-item-descr">Select allerges</div>
       <div id="pref-container">
         <div
           className="pref-item"
@@ -28,7 +32,7 @@ export default function ExclusionItems() {
             setWantsNuts((wantsNuts) => !wantsNuts);
           }}
         >
-          nuts
+          <h3 className="click_able">nuts</h3>
           <XImg num={wantsNuts} />
         </div>
         <div
@@ -37,7 +41,7 @@ export default function ExclusionItems() {
             setWantsDairy((wantsDairy) => !wantsDairy);
           }}
         >
-          dairy
+          <h3 className="click_able">dairy</h3>
           <XImg num={wantsDairy} />
         </div>
         <div
@@ -46,7 +50,7 @@ export default function ExclusionItems() {
             setWantsMeat((wantsMeat) => !wantsMeat);
           }}
         >
-          meat
+          <h3 className="click_able">meat</h3>
           <XImg num={wantsMeat} />
         </div>
       </div>

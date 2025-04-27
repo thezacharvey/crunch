@@ -1,0 +1,62 @@
+
+.mainFoodHolderDiv{
+
+    display:flex;
+   
+    background-color: rgb(199, 113, 113);
+ 
+}
+
+.FoodHolderGridItem{
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height:  auto;
+ 
+}
+
+
+
+#rec_steps{
+    display: flex;
+   
+}
+
+ul{
+
+    
+    text-align: left;
+
+}
+
+.click_able:hover{
+
+    cursor: pointer;
+
+}
+
+#steps-card{
+    background-color: rgb(218, 100, 100);
+    padding-right: 1rem
+   
+
+}
+
+#recipe-card{
+    background-color: rgb(165, 75, 75);
+    color: rgb(244, 197, 9);;
+    padding-right: 1rem
+}
+
+#food-name{
+    background-color: rgb(127, 39, 39);
+    color: rgb(244, 197, 9);;
+}
+#food-desc{
+
+    background-color: rgb(244, 197, 9);
+    font-weight: bold;
+    color: brown;
+}
